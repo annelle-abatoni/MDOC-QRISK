@@ -930,8 +930,11 @@
       crossorigin="anonymous"
     />
 
-        <!-- Calculator begins here -->
-        <section>  
+        <!-- Calculator starts here -->
+        <section>
+                import { calc as femaleScore } from "./calcFemale";
+                import { calc as maleScore } from "./calcMale";
+                export default { femaleScore, maleScore };
             <div class = "inner">
               <h2> Welcome to the QRISK-2018 risk calculator! </h2>            
               <p>
@@ -942,26 +945,19 @@
                     <h3>
                       This site is designed to work with javascript enabled.
                     </h3>
-										
-                    <p>
-											Please enable it in your browser.
-										</p>
-                    <noscript>
-                        <h3>
-													This site is designed to work with javascript enabled.
-												</h3>
+			  <p>Please enable it in your browser.</p>
+			  <noscript>
+                                  <h3>This site is designed to work with javascript enabled.</h3>
 												
-                        <p>
-													Please enable it in your browser.
-												</p>
-											
-                        </noscript>
+                           <p>Please enable it in your browser.</p>
+                          </noscript>
+                          
 										
                     </TD>
                       </TR>
                         <tr>
                           <TD>
-                            <form action="/three/index.php" method="GET"></form>
+                            <form action="/results.html" method="POST"></form>
                           </TD>
                         </tr>
                         <tr>
@@ -969,7 +965,7 @@
                             <table>
                               <TR valign="top">
                                 <TD width=400>
-                                  <form name="calculator" action='/three/index.php' method='GET' onsubmit="return checkCalculatorForm(this)"></form>
+                                  <form name="calculator" action='/results.html' method='POST' onsubmit="return checkCalculatorForm(this)"></form>
                                               
                         <fieldset>
                           <legend>About you</legend>
