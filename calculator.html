@@ -939,40 +939,56 @@
                   of coronary heart disease (including angina or heart attack) or stroke/transient ischaemic attack.
                   </p>
                   <noscript>
-                    <h3>This site is designed to work with javascript enabled.</h3>
-                    <p>Please enable it in your browser.</p>
+                    <h3>
+                      This site is designed to work with javascript enabled.
+                    </h3>
+										
+                    <p>
+											Please enable it in your browser.
+										</p>
                     <noscript>
-                        <h3>This site is designed to work with javascript enabled.</h3>
-                        <p>Please enable it in your browser.</p>
+                        <h3>
+													This site is designed to work with javascript enabled.
+												</h3>
+												
+                        <p>
+													Please enable it in your browser.
+												</p>
+											
                         </noscript>
-                        </TD></TR>
-                        <tr><TD><form action="/three/index.php" method="POST">
-                       
-                        </form>
-                        </TD></tr>
+										
+                    </TD>
+                      </TR>
                         <tr>
-                        <td>
-                        <table>
-                        <TR valign="top">
-                        <TD width=400><form name="calculator" action='/three/index.php' method='POST' onsubmit="return checkCalculatorForm(this)">
-                
-                        <fieldset>
-                        <legend>About you</legend>
-                        <table summary="Patient info">
-                        <tr>
-                        <td>Age (25-84):</td>
-                        <td> <INPUT type='text' name='age' value='64' size=3></td>
+                          <TD>
+                            <form action="/three/index.php" method="GET"></form>
+                          </TD>
                         </tr>
                         <tr>
-                            <td>Sex:</td>
-                            <td>
+                          <td>
+                            <table>
+                              <TR valign="top">
+                                <TD width=400>
+                                  <form name="calculator" action='/three/index.php' method='GET' onsubmit="return checkCalculatorForm(this)"></form>
+                                              
+                        <fieldset>
+                          <legend>About you</legend>
+                          <table summary="Patient info">
+                        <tr>
+                          <td>Age (25-84):</td>
+                          <td> <INPUT type='text' name='age' value='64' size=3></td>
+                        </tr>
+                        <tr>
+                          <td>Sex:</td>
+                          <td>
                             <INPUT type='radio' name='sex' value='1' checked>Male
                             <INPUT type='radio' name='sex' value='0' >Female
-                        </td>
+                          </td>
                         </tr>
+                        
                         <tr>
-                        <td>Ethnicity:</td>
-                        <td> 
+                          <td>Ethnicity:</td>
+                          <td>
                             <select NAME=ethnicity>
                             <option value='1' selected>White or not stated</option>
                             <option value='2' >Indian</option>
@@ -984,151 +1000,151 @@
                             <option value='8' >Chinese</option>
                             <option value='9' >Other ethnic group</option>
                             </select>
-                        </td>
+                         </td>
                         </tr>
                         <tr>
-                        <td colspan="2">
-                        <fieldset><legend>UK postcode: leave blank if unknown</legend>
-                        <table>
-                        <tr>
-                        <td>Postcode:</td>
-                        <td><INPUT type='text' name='postcode' value='' maxlength=8 size=8></td>
+                          <td colspan="2">
+                            <fieldset><legend>UK postcode: leave blank if unknown</legend>
+                              <table>
+                                <tr>
+                                  <td>Postcode:</td>
+                                  <td><INPUT type='text' name='postcode' value='' maxlength=8 size=8></td>
+                                </tr>
+                              </table>
+                            </fieldset>
+                          </td>
                         </tr>
-                        </table>
-                        </fieldset>
-                        </td>
-                        </tr>
-                        </table>
-                        </fieldset>
-                        <fieldset>
+                       </table>
+                      </fieldset>
+                      <fieldset>
                         <legend>Clinical information</legend>
                         <table>
-                        <tr>
-                        <td>Smoking status:</td>
-                        <td> 
-                        <select NAME=smoke_cat>
-                            <option value='0' selected>non-smoker</option>
-                            <option value='1' >ex-smoker</option>
-                            <option value='2' >light smoker (less than 10)</option>
-                            <option value='3' >moderate smoker (10 to 19)</option>
-                            <option value='4' >heavy smoker (20 or over)</option>
-                        </select>
-                        </td>
-                        </tr>
+                          <tr>
+                            <td>Smoking status:</td>
+                            <td>
+                              <select NAME=smoke_cat>
+                                <option value='0' selected>non-smoker</option>
+                                <option value='1' >ex-smoker</option>
+                                <option value='2' >light smoker (less than 10)</option>
+                                <option value='3' >moderate smoker (10 to 19)</option>
+                                <option value='4' >heavy smoker (20 or over)</option>
+                              </select>
+                             </td>
+                            </tr>
+                           </table>
+                           <table>
+                             <tr>
+                                <td>Diabetes status:</td>
+                               <td> 
+                                 <select NAME=diabetes_cat>
+                                   <option value='0' selected>none</option>
+                                   <option value='1' >type 1</option>
+                                   <option value='2' >type 2</option>
+                                 </select>
+                               </td>
+                             </tr>
+                            </table>
+                        <table>
+                          <tr>
+                            <td>Angina or heart attack in a 1st degree relative < 60?</td>
+                            <td><INPUT type='checkbox' name='fh_cvd'  ></td>
+                          </tr>
                         </table>
                         <table>
-                        <tr>
-                        <td>Diabetes status:</td>
-                        <td> 
-                        <select NAME=diabetes_cat>
-                            <option value='0' selected>none</option>
-                            <option value='1' >type 1</option>
-                            <option value='2' >type 2</option>
-                        </select>
-                        </td>
-                        </tr>
+                          <tr>
+                            <td>Chronic kidney disease (stage 3, 4 or 5)?</td>
+                            <td><INPUT type='checkbox' name='b_renal'  ></td>
+                          </tr>
                         </table>
                         <table>
-                        <tr>
-                        <td>Angina or heart attack in a 1st degree relative < 60?</td>
-                        <td><INPUT type='checkbox' name='fh_cvd'  ></td>
-                        </tr>
+                          <tr>
+                            <td>Atrial fibrillation?</td>
+                            <td><INPUT type='checkbox' name='b_AF'  ></td>
+                          </tr>
                         </table>
                         <table>
-                        <tr>
-                        <td>Chronic kidney disease (stage 3, 4 or 5)?</td>
-                        <td><INPUT type='checkbox' name='b_renal'  ></td>
-                        </tr>
+                          <tr>
+                            <td>On blood pressure treatment?</td>
+                            <td><INPUT type='checkbox' name='b_treatedhyp'  ></td>
+                          </tr>
                         </table>
                         <table>
-                        <tr>
-                        <td>Atrial fibrillation?</td>
-                        <td><INPUT type='checkbox' name='b_AF'  ></td>
-                        </tr>
+                          <tr>
+                            <td>Do you have migraines?</td>
+                            <td><INPUT type='checkbox' name='b_migraine'  ></td>
+                          </tr>
                         </table>
                         <table>
-                        <tr>
-                        <td>On blood pressure treatment?</td>
-                        <td><INPUT type='checkbox' name='b_treatedhyp'  ></td>
-                        </tr>
+                          <tr>
+                            <td>Rheumatoid arthritis?</td>
+                            <td><INPUT type='checkbox' name='b_ra'  ></td>
+                          </tr>
                         </table>
                         <table>
-                        <tr>
-                        <td>Do you have migraines?</td>
-                        <td><INPUT type='checkbox' name='b_migraine'  ></td>
-                        </tr>
+                          <tr>
+                            <td>Systemic lupus erythematosus (SLE)?</td>
+                            <td><INPUT type='checkbox' name='b_sle'  ></td>
+                          </tr>
                         </table>
                         <table>
-                        <tr>
-                        <td>Rheumatoid arthritis?</td>
-                        <td><INPUT type='checkbox' name='b_ra'  ></td>
-                        </tr>
+                          <tr>
+                            <td>
+                              Severe mental illness? <br/>
+                              <small>(this includes schizophrenia, bipolar disorder and moderate/severe depression)</small>
+                            </td>
+                            <td><INPUT type='checkbox' name='b_semi'  ></td>
+                          </tr>
                         </table>
                         <table>
-                        <tr>
-                        <td>Systemic lupus erythematosus (SLE)?</td>
-                        <td><INPUT type='checkbox' name='b_sle'  ></td>
-                        </tr>
+                          <tr>
+                            <td>On atypical antipsychotic medication?</td>
+                            <td><INPUT type='checkbox' name='b_atypicalantipsy'  ></td>
+                          </tr>
                         </table>
                         <table>
-                        <tr>
-                        <td>
-                        Severe mental illness? <br/>
-                        <small>(this includes schizophrenia, bipolar disorder and moderate/severe depression)</small>
-                        </td>
-                        <td><INPUT type='checkbox' name='b_semi'  ></td>
-                        </tr>
+                          <tr>
+                            <td>Are you on regular steroid tablets?</td>
+                            <td><INPUT type='checkbox' name='b_corticosteroids'  ></td>\
+                          </tr>
                         </table>
                         <table>
-                        <tr>
-                        <td>On atypical antipsychotic medication?</td>
-                        <td><INPUT type='checkbox' name='b_atypicalantipsy'  ></td>
-                        </tr>
-                        </table>
-                        <table>
-                        <tr>
-                        <td>Are you on regular steroid tablets?</td>
-                        <td><INPUT type='checkbox' name='b_corticosteroids'  ></td>
-                        </tr>
-                        </table>
-                        <table>
-                        <tr>
-                        <td>A diagnosis of or treatment for erectile disfunction?</td>
-                        <td><INPUT type='checkbox' name='b_impotence2'  ></td>
-                        </tr>
+                          <tr>
+                            <td>A diagnosis of or treatment for erectile disfunction?</td>
+                            <td><INPUT type='checkbox' name='b_impotence2'  ></td>
+                          </tr>
                         </table>
                         <fieldset>
-                        <legend>Leave blank if unknown</legend>
-                        <table>
-                        <tr>
+                          <legend>Leave blank if unknown</legend>
+                          <table>
+                            <tr>
                             <td>Cholesterol/HDL ratio:</td>
                             <td><INPUT type='text' name='rati' size=7 value='' id='rati'></td>
                         </tr>
                         </table>
                         <table>
-                        <tr>
+                          <tr>
                             <td>Systolic blood pressure (mmHg):</td>
                             <td><INPUT type='text' name='sbp' size=7 value='' id='sbp'></td>
-                        </tr>
+                          </tr>
                         </table>
                         <table>
-                        <tr>
+                          <tr>
                             <td>Standard deviation of at least two most recent systolic blood pressure readings (mmHg):</td>
                             <td><INPUT type='text' name='sbps5' size=7 value='' id='sbps5'></td>
-                        </tr>
+                          </tr>
                         </table>
                         <fieldset>
-                        <legend>Body mass index</legend>
-                        <table>
+                          <legend>Body mass index</legend>
+                          <table>
                             <tr>
-                            <td>Height (cm):</td>
-                            <td><INPUT type='text' name='height' size=7 value='' id='height'></td>
+                              <td>Height (cm):</td>
+                              <td><INPUT type='text' name='height' size=7 value='' id='height'></td>
                             </tr>
                             <tr>
-                            <td>Weight (kg):</td>
-                            <td><INPUT type='text' name='weight' size=7 value='' id='weight'></td>
+                              <td>Weight (kg):</td>
+                              <td><INPUT type='text' name='weight' size=7 value='' id='weight'></td>
                             </tr>
-                        </table>
+                          </table>
             
             <a href>
                       <button class="auth-btn reg-btn">Calculate</button>
