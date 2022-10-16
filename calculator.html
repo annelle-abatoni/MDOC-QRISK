@@ -932,12 +932,15 @@
 
         <!-- Calculator starts here -->
         <section>
-              
+                
             <div class = "inner">
               <h2> Welcome to the QRISK-2018 risk calculator! </h2>            
               <p>
                   This calculator is only valid if you do not already have a diagnosis
-                  of coronary heart disease (including angina or heart attack) or stroke/transient ischaemic attack.
+                  of coronary heart disease (including angina or heart attack) or stroke/transient ischaemic attack.</br>
+                  If you don't have an account, enter your email address and Date of birth below.
+                  
+
                   </p>
                   <noscript>
                     <h3>
@@ -955,27 +958,40 @@
                       </TR>
                         <tr>
                           <TD>
-				<form>
+				  <form>
 				 
-				 <div>
-					<label for="email">Email</label>
-				 </div>
-				 <div>
-				  <input name="email" type="text" />
-				 </div>
-				 <div>
-					<label for="dob">Date of Birth</label>
-				 </div>
-				 <div>
-				  <input name="date" type="date" />
-				 </div>
-				 <div>
-					<input type="submit" value="Submit" />
-				  </div>
+					 <div>
+						<label for="email">Email</label>
+					 </div>
+           <div>
+            <input name="email" type="text" />
+         </div>
+           <div>
+						<label for="f_name">FirstName</label>
+					 </div>
+           <div>
+            <input name="f_name" type="text" />
+         </div>
+        
+         <div>
+          <label for="email">Last Name</label>
+         </div>
+					 <div>
+              <input name="l_name" type="text" />
+					 </div>
+					 <div>
+              <label for="dob">Date of Birth</label>
+					 </div>
+					 <div>
+              <input name="dob" type="date" />
+					 </div>
+					 <div>
+						<input type="submit" value="Submit" />
+					  </div>
 					  
 				  </form>
-          	<form action="/results.html" method="POST">
-                          </TD>
+          <form action="/Users/Essy/Documents/GitHub/MDOC-QRISK/results.php" method="POST">
+              </TD>
                         </tr>
                         <tr>
                           <td>
@@ -989,12 +1005,12 @@
                           <table summary="Patient info">
                         <tr>
                           <td>Age (25-84):</td>
-                          <td> <INPUT type='text' name='age' value='64' size=3></td>
+                          <td> <INPUT type='text' name='age' value='' size=3></td>
                         </tr>
                         <tr>
                           <td>Sex:</td>
                           <td>
-                            <INPUT type='radio' name='sex' value='1' checked>Male
+                            <INPUT type='radio' name='sex' value='1' >Male
                             <INPUT type='radio' name='sex' value='0' >Female
                           </td>
                         </tr>
@@ -1003,29 +1019,20 @@
                           <td>Ethnicity:</td>
                           <td>
                             <select NAME=ethnicity>
-                            <option value='1' selected>White or not stated</option>
+                            <option value='1' selected>Black African</option>
                             <option value='2' >Indian</option>
                             <option value='3' >Pakistani</option>
                             <option value='4' >Bangladeshi</option>
                             <option value='5' >Other Asian</option>
                             <option value='6' >Black Caribbean</option>
-                            <option value='7' >Black African</option>
+                            <option value='7' >White or Caucasian</option>
                             <option value='8' >Chinese</option>
                             <option value='9' >Other ethnic group</option>
                             </select>
                          </td>
                         </tr>
                         <tr>
-                          <td colspan="2">
-                            <fieldset><legend>UK postcode: leave blank if unknown</legend>
-                              <table>
-                                <tr>
-                                  <td>Postcode:</td>
-                                  <td><INPUT type='text' name='postcode' value='' maxlength=8 size=8></td>
-                                </tr>
-                              </table>
-                            </fieldset>
-                          </td>
+                          
                         </tr>
                        </table>
                       </fieldset>
@@ -1035,7 +1042,7 @@
                           <tr>
                             <td>Smoking status:</td>
                             <td>
-                              <select NAME=smoke_cat>
+                              <select NAME=smoke_Tobacco>
                                 <option value='0' selected>non-smoker</option>
                                 <option value='1' >ex-smoker</option>
                                 <option value='2' >light smoker (less than 10)</option>
@@ -1071,34 +1078,29 @@
                         </table>
                         <table>
                           <tr>
-                            <td>Atrial fibrillation?</td>
-                            <td><INPUT type='checkbox' name='b_AF'  ></td>
+                            <td>Stroke?</td>
+                            <td><INPUT type='checkbox' name='stroke'  ></td>
                           </tr>
                         </table>
                         <table>
                           <tr>
                             <td>On blood pressure treatment?</td>
-                            <td><INPUT type='checkbox' name='b_treatedhyp'  ></td>
+                            <td><INPUT type='checkbox' name='Blood_Pressure'  ></td>
                           </tr>
                         </table>
                         <table>
                           <tr>
-                            <td>Do you have migraines?</td>
-                            <td><INPUT type='checkbox' name='b_migraine'  ></td>
+                            <td>Do you have headache?</td>
+                            <td><INPUT type='checkbox' name='headache'  ></td>
                           </tr>
                         </table>
                         <table>
                           <tr>
                             <td>Rheumatoid arthritis?</td>
-                            <td><INPUT type='checkbox' name='b_ra'  ></td>
+                            <td><INPUT type='checkbox' name='Arthritis'  ></td>
                           </tr>
                         </table>
-                        <table>
-                          <tr>
-                            <td>Systemic lupus erythematosus (SLE)?</td>
-                            <td><INPUT type='checkbox' name='b_sle'  ></td>
-                          </tr>
-                        </table>
+                        
                         <table>
                           <tr>
                             <td>
@@ -1117,7 +1119,7 @@
                         <table>
                           <tr>
                             <td>Are you on regular steroid tablets?</td>
-                            <td><INPUT type='checkbox' name='b_corticosteroids'  ></td>\
+                            <td><INPUT type='checkbox' name='b_corticostero'  ></td>
                           </tr>
                         </table>
                         <table>
@@ -1131,13 +1133,13 @@
                           <table>
                             <tr>
                             <td>Cholesterol/HDL ratio:</td>
-                            <td><INPUT type='text' name='rati' size=7 value='' id='rati'></td>
+                            <td><INPUT type='text' name='HDL' size=7 value='' id='rati'></td>
                         </tr>
                         </table>
                         <table>
                           <tr>
                             <td>Systolic blood pressure (mmHg):</td>
-                            <td><INPUT type='text' name='sbp' size=7 value='' id='sbp'></td>
+                            <td><INPUT type='text' name='Blood_Pressure' size=7 value='' id='sbp'></td>
                           </tr>
                         </table>
                         <table>
@@ -1151,20 +1153,21 @@
                           <table>
                             <tr>
                               <td>Height (cm):</td>
-                              <td><INPUT type='text' name='height' size=7 value='' id='height'></td>
+                              <td><INPUT type='text' name='Height' size=7 value='' id='height'></td>
                             </tr>
                             <tr>
                               <td>Weight (kg):</td>
-                              <td><INPUT type='text' name='weight' size=7 value='' id='weight'></td>
+                              <td><INPUT type='text' name='Weight_kg' size=7 value='' id='weight'></td>
                             </tr>
                           </table>
-            
+          
             <a href>
                       <button class="auth-btn reg-btn">Calculate</button>
                     </a>
               </div>
-  
+          </form>
           </section>
+          </body>
           <!-- Calculator ends here -->
 
 
@@ -1211,7 +1214,7 @@
       <script src="https://www.mymdoc.com/wp-content/themes/mdoc/js/smoothscroll.js"></script>
       <script src="https://www.mymdoc.com/wp-content/themes/mdoc/js/jquery.slimmenu.js"></script>
       <script src="https://www.mymdoc.com/wp-content/themes/mdoc/js/scripts.js"></script>
-       <script src="https://www.mymdoc.com/wp-content/themes/mdoc/js/jquery-2.2.0.min.js"></script>
+      <script src="https://www.mymdoc.com/wp-content/themes/mdoc/js/jquery-2.2.0.min.js"></script>
 
       <script type="text/javascript">
 
