@@ -957,7 +957,25 @@
                       </TR>
                         <tr>
                           <TD>
-                            <form action="/results.html" method="POST"></form>
+				  <form action="/results.html" method="POST">
+				 	enctype="application/x-www-form-urlencoded">
+					 <div>
+						<label for="status">Status</label>
+					 </div>
+					 <div>
+                                                <input name="status" type="text" />
+					 </div>
+					 <div>
+                                                <label for="date">Date</label>
+					 </div>
+					 <div>
+                                                <input name="date" type="text" />
+					 </div>
+					 <div>
+						<input type="submit" value="Submit" />
+					  </div>
+					  
+				    </form>
                           </TD>
                         </tr>
                         <tr>
