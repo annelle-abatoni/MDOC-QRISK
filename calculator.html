@@ -1044,33 +1044,48 @@
                             <td>
                               <select NAME=smoke_Tobacco>
                                 <option value='0' selected>non-smoker</option>
-                                <option value='1' >ex-smoker</option>
-                                <option value='2' >light smoker (less than 10)</option>
-                                <option value='3' >moderate smoker (10 to 19)</option>
-                                <option value='4' >heavy smoker (20 or over)</option>
+                                <option value='1' >Ex-Smoker</option>
+                                <option value='2' >Light Smoker (less than 10)</option>
+                                <option value='3' >Moderate Smoker (10 to 19)</option>
+                                <option value='4' >Heavy Smoker (20 or over)</option>
                               </select>
                              </td>
                             </tr>
                            </table>
+                           <table>
+                            <tr>
+                              <td>Alcohol Consumption:</td>
+                              <td>
+                                <select NAME=alcohol>
+                                  <option value='0' selected>No Alcohol Consumption</option>
+                                  <option value='1' >Moderate Alcohol Consumption</option>
+                                  <option value='2' >Low-Risk Drinking</option>
+                                  <option value='3' >Binge Drinking</option>
+                                  <option value='4' >Heavy Drinking</option>
+                                </select>
+                               </td>
+                              </tr>
+                             </table>
+
                            <table>
                              <tr>
                                 <td>Diabetes status:</td>
                                <td> 
                                  <select NAME=diabetes_cat>
                                    <option value='0' selected>none</option>
-                                   <option value='1' >type 1</option>
-                                   <option value='2' >type 2</option>
+                                   <option value='1' >Type 1</option>
+                                   <option value='2' >Type 2</option>
                                  </select>
                                </td>
                              </tr>
                             </table>
+                        
                         <table>
                           <tr>
-                            <td>Angina or heart attack in a 1st degree relative < 60?</td>
-                            <td><INPUT type='checkbox' name='fh_cvd'  ></td>
+                            <td>Severe Headaches/Migraines?</td>
+                            <td><INPUT type='checkbox' name='severity'  ></td>
                           </tr>
-                        </table>
-                        <table>
+                        </table><table>
                           <tr>
                             <td>Chronic kidney disease (stage 3, 4 or 5)?</td>
                             <td><INPUT type='checkbox' name='b_renal'  ></td>
@@ -1078,7 +1093,7 @@
                         </table>
                         <table>
                           <tr>
-                            <td>Stroke?</td>
+                            <td>Had a Stroke?</td>
                             <td><INPUT type='checkbox' name='stroke'  ></td>
                           </tr>
                         </table>
@@ -1088,46 +1103,23 @@
                             <td><INPUT type='checkbox' name='Blood_Pressure'  ></td>
                           </tr>
                         </table>
-                        <table>
-                          <tr>
-                            <td>Do you have headache?</td>
-                            <td><INPUT type='checkbox' name='headache'  ></td>
-                          </tr>
-                        </table>
+                        
                         <table>
                           <tr>
                             <td>Rheumatoid arthritis?</td>
                             <td><INPUT type='checkbox' name='Arthritis'  ></td>
                           </tr>
                         </table>
-                        
+   
+
                         <table>
                           <tr>
-                            <td>
-                              Severe mental illness? <br/>
-                              <small>(this includes schizophrenia, bipolar disorder and moderate/severe depression)</small>
-                            </td>
-                            <td><INPUT type='checkbox' name='b_semi'  ></td>
-                          </tr>
-                        </table>
-                        <table>
-                          <tr>
-                            <td>On atypical antipsychotic medication?</td>
+                            <td>On blood pressure medication?</td>
                             <td><INPUT type='checkbox' name='b_atypicalantipsy'  ></td>
                           </tr>
                         </table>
-                        <table>
-                          <tr>
-                            <td>Are you on regular steroid tablets?</td>
-                            <td><INPUT type='checkbox' name='b_corticostero'  ></td>
-                          </tr>
-                        </table>
-                        <table>
-                          <tr>
-                            <td>A diagnosis of or treatment for erectile disfunction?</td>
-                            <td><INPUT type='checkbox' name='b_impotence2'  ></td>
-                          </tr>
-                        </table>
+                        
+                        
                         <fieldset>
                           <legend>Leave blank if unknown</legend>
                           <table>
@@ -1151,6 +1143,18 @@
                         <fieldset>
                           <legend>Body mass index</legend>
                           <table>
+                          <tr>
+                            <td> 
+                              <select NAME=bmi>
+                                <option value='0' selected> Healthy (18.5 - 25)</option>
+                                <option value='1' >Overweight (25 - 30)</option>
+                                <option value='2>' >Obese (More than 30)</option>
+                              </select>
+                            </td>
+                          </tr>
+                        </table>
+                        <small>(If you don't know the exact value, fill this out)</small>
+                        <table>
                             <tr>
                               <td>Height (cm):</td>
                               <td><INPUT type='text' name='Height' size=7 value='' id='height'></td>
